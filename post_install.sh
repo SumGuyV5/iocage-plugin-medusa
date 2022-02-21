@@ -15,7 +15,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
 cp /usr/local/medusa/runscripts/init.freebsd /usr/local/etc/rc.d/medusa
-chmod 555 /usr/local/etc/rc.d/medusa
+chmod 755 /usr/local/etc/rc.d/medusa
 
 sysrc medusa_enable=YES
 sysrc medusa_python_dir="/usr/local/bin/python3.8"
@@ -23,4 +23,4 @@ sysrc medusa_python_dir="/usr/local/bin/python3.8"
 service medusa start
 
 echo -e "Medusa now installed.\n" > /root/PLUGIN_INFO
-echo -e "\nGo to $IP_ADDRESS:8081\n" >> /root/PLUGIN_INFO
+echo -e "\nGo to http://$IP_ADDRESS:8081\n" >> /root/PLUGIN_INFO

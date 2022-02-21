@@ -1,3 +1,3 @@
 {
-        "servicerestart": "service medusa restart"
+	"servicerestart": "service medusa restart"
 }
